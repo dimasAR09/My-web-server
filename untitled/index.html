@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Wanita Spesialku ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffe4e1);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Quicksand', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+      z-index: 10;
+      backdrop-filter: blur(5px);
+      border: 2px dashed #ff69b4;
+      max-width: 90%;
+    }
+
+    /* Animasi detak jantung pada gambar */
+    .photo-frame {
+      width: 250px;
+      height: 250px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 8px solid #ff69b4;
+      box-shadow: 0 0 20px #ff1493;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      14% { transform: scale(1.05); }
+      28% { transform: scale(1); }
+      42% { transform: scale(1.05); }
+      70% { transform: scale(1); }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #d81b60;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.8);
+    }
+
+    p {
+      color: #c2185b;
+      font-size: 1.2em;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    /* Desain bentuk hati (Love) menggunakan CSS */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff3366;
+      transform: rotate(-45deg);
+      animation: floatUp infinite linear;
+      z-index: 1;
+      opacity: 0.8;
+      box-shadow: 0 0 10px #ff3366;
+    }
+
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff3366;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 10px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.5) rotate(-45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-20vh) scale(1.5) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Wadah Konten Utama -->
+<div class="container">
+  <!-- Foto spesial disisipkan di sini -->
+  <div class="photo-frame">
+    <img src="img/sayang.jpg" alt="Wanita Spesialku">
+  </div>
+  <h1>Halo, Kesayanganku! 💕</h1>
+  <p>
+    Mungkin aku bukan seorang penyair yang pandai merangkai kata,<br>
+    tapi aku bisa merangkai kode ini khusus untukmu.<br><br>
+    Senyummu selalu menjadi favoritku. <br>
+    Terima kasih sudah menjadi bagian terindah dalam hariku! 💖
+  </p>
+</div>
+
+<!-- JavaScript untuk membuat hujan hati (Love) -->
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+
+    // Ukuran hati random
+    const size = Math.random() * 20 + 10; // Antara 10px sampai 30px
+    heart.style.width = `${size}px`;
+    heart.style.height = `${size}px`;
+
+    // Perbaiki posisi ::before dan ::after secara dinamis melalui penambahan custom property
+    heart.style.setProperty('--size', `${size}px`);
+
+    // Posisi horizontal random
+    heart.style.left = Math.random() * 100 + "vw";
+
+    // Durasi animasi random agar terlihat natural
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s"; // 3s sampai 6s
+
+    // Warna merah muda / merah random untuk variasi
+    const colors = ['#ff3366', '#ff1493', '#ff69b4', '#d81b60'];
+    heart.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+    document.body.appendChild(heart);
+
+    // Hapus elemen hati setelah selesai animasi agar tidak berat
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }
+
+  // Jalankan fungsi membuat hati setiap 250 milidetik
+  setInterval(createHeart, 250);
+</script>
+</body>
+</html>
