@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - 057035538</title>
+    <!-- Menggunakan Font Google untuk tampilan yang lebih bagus -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Gradient background yang menarik */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            background-color: #f8f9fa;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+            margin-bottom: 15px;
+            background-color: #ddd;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .nim {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1rem;
+            background: #eef2ff;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #555;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #764ba2;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .bio-text {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hobby-tag {
+            background: #f0f2f5;
+            color: #555;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .hobby-tag:hover {
+            background: #764ba2;
+            color: white;
+        }
+
+        .footer {
+            background: #fafafa;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaa;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="header">
+            <!-- Foto profil karakter cowok keren -->
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Adrian&accessories=sunglasses&clothing=hoodie" alt="Foto Profil" class="avatar">
+            
+            <!-- Silakan ganti nama Anda di sini -->
+            <h1 class="name">Dimas arif rahmansyah</h1>
+            
+            <!-- NIM Sudah diperbarui -->
+            <div class="nim">NIM: 057035538</div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">Tentang Saya</div>
+                <p class="bio-text">
+                    Halo! Saya Dimas, saya adalah mahasiswa Universitas Terbuka jurusan DATA SAINS dengan NIM 057035538. Saya memiliki antusiasme tinggi terhadap dunia jaringan, Big Data, Blockchain dan pengembangan web server serta AI.
+                </p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Hobi & Minat</div>
+                <div class="hobbies">
+                    <span class="hobby-tag">💻 Coding</span>
+                    <span class="hobby-tag">🎮 Gaming</span>
+                    <span class="hobby-tag">📚 Membaca</span>
+                    <span class="hobby-tag">☕ Kopi</span>
+                    <span class="hobby-tag">📸 Fotografi</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Server Status: <span style="color: #2ecc71; font-weight: bold;">● Online</span><br>
+            Diakses melalui <a href="#" style="text-decoration: none; color: #667eea;">www.057035538.com</a>
+        </div>
+    </div>
+
+</body>
+</html>
